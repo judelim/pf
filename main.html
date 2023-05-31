@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Long-Playing Record</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      #portfolio {
+        color: white;
+        text-align: center;
+        font-size: 60px;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+      }
+      .lp1 {
+        display: inline-block;
+        display: flex;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-left: 300px;
+      }
+
+      #lp1 {
+        border: 1px solid white;
+        width: 250px;
+        height: 300px;
+        margin-right: 30px;
+      }
+      #lp2 {
+        border: 1px solid white;
+        width: 250px;
+        height: 300px;
+        margin-right: 30px;
+      }
+      #lp3 {
+        border: 1px solid white;
+        width: 250px;
+        height: 300px;
+        margin-right: 30px;
+      }
+      .lp2 {
+        display: inline-block;
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 300px;
+      }
+      #lp4 {
+        border: 1px solid white;
+        width: 250px;
+        height: 300px;
+        margin-right: 30px;
+      }
+      #lp5 {
+        border: 1px solid white;
+        width: 250px;
+        height: 300px;
+        margin-right: 30px;
+      }
+      #lp6 {
+        border: 1px solid white;
+        width: 250px;
+        height: 300px;
+        margin-right: 30px;
+      }
+      hr {
+        width: 900px;
+      }
+
+      .circle1 {
+        border: 50px solid white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 45px;
+        margin-top: 15px;
+        box-shadow: 0px 15px 20px -10px Blue;
+        animation: rotate-1 3s linear infinite;
+      }
+      .circle1:hover {
+        box-shadow: 0px 15px 20px -10px Blue;
+        animation-play-state: paused;
+      }
+
+      @keyframes rotate-1 {
+        0% {
+          transform: rotate(0deg);
+          box-shadow: 0 15px 10px -10px blue;
+        }
+        100% {
+          transform: rotate(360deg);
+          box-shadow: 0 15px 10px -10px blue;
+        }
+      }
+      .circle2 {
+        border: 50px solid white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 45px;
+        margin-top: 15px;
+        box-shadow: 0px 15px 20px -10px pink;
+        animation: rotate-2 8s linear infinite;
+      }
+      .circle2:hover {
+        box-shadow: 0px 15px 20px -10px pink;
+      }
+      @keyframes rotate-2 {
+        0% {
+          transform: rotate(0deg);
+          box-shadow: 0 15px 10px -10px pink;
+        }
+        100% {
+          transform: rotate(360deg);
+          box-shadow: 0 15px 10px -10px pink;
+        }
+      }
+      .circle3 {
+        border: 50px solid white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 45px;
+        margin-top: 15px;
+        box-shadow: 0px 15px 20px -10px green;
+        animation: rotate-3 5s linear infinite;
+      }
+      .circle3:hover {
+        box-shadow: 0px 15px 20px -10px green;
+      }
+      @keyframes rotate-3 {
+        0% {
+          transform: rotate(0deg);
+          box-shadow: 0 15px 10px -10px green;
+        }
+        100% {
+          transform: rotate(360deg);
+          box-shadow: 0 15px 10px -10px green;
+        }
+      }
+      .title {
+        color: white;
+        margin-top: 15px;
+      }
+      .disc {
+        color: white;
+        margin-top: 5px;
+        margin-left: 60px;
+      }
+      #title_1 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-top: 1px solid white;
+        text-align: center;
+      }
+      #disc_1 {
+        width: 125px;
+        border-top: 1px solid white;
+        padding-top: 5px;
+        text-align: center;
+      }
+      #title_2 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-top: 1px solid white;
+        text-align: center;
+      }
+      #disc_2 {
+        width: 125px;
+        border-top: 1px solid white;
+        padding-top: 5px;
+        text-align: center;
+      }
+      #title_3 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-top: 1px solid white;
+        text-align: center;
+      }
+      #disc_3 {
+        width: 125px;
+        border-top: 1px solid white;
+        padding-top: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="portfolio"><a href="main1.html">Long-Playing Record</a></h1>
+    <hr />
+    <div class="lp1">
+      <div id="lp1">
+        <a href="WWW1.html"><div class="circle1"></div></a>
+        <div class="title">
+          <div id="title_1">www.juhyung.com</div>
+        </div>
+        <div class="disc">
+          <div id="disc_1">
+            World <br />
+            Wide <br />
+            Web
+          </div>
+        </div>
+      </div>
+
+      <div id="lp2">
+        <a href="#"><div class="circle2"></div></a>
+        <div class="title">
+          <div id="title_2">Title:</div>
+        </div>
+        <div class="disc">
+          <div id="disc_2">Discription:</div>
+        </div>
+      </div>
+
+      <div id="lp3">
+        <a href="gallery.html"><div class="circle3"></div></a>
+        <div class="title">
+          <div id="title_3">CANS</div>
+        </div>
+        <div class="disc">
+          <div id="disc_3">S o U p S</div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="lp2">
+      <div id="lp4">
+        <a href="#"><div class="circle4"></div></a>
+      </div>
+      <div id="lp5">
+        <a href="#"><div class="circle5"></div></a>
+      </div>
+      <div id="lp6">
+        <a href="#"><div class="circle6"></div></a>
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day Dreams</title>
+  </head>
+  <style>
+    #myCanvas {
+      display: block;
+      margin: 0 auto;
+      border: 10px ridge black;
+    }
+  </style>
+  <body>
+    <canvas id="myCanvas" width="1360" height="745"></canvas>
+    <br />
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="clearCanvas()">Clear Canvas</button>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      const colors = [
+        "#ff1493", // deep pink
+        "#ffa500", // orange
+        "#ff69b4", // hot pink
+        "#ff6347", // tomato
+        "#ffff00", // yellow
+        "#7cfc00", // lawn green
+        "#00ffff", // aqua
+        "#00bfff", // deep sky blue
+        "#9400d3", // dark violet
+        "#ff00ff", // magenta
+        "#00ff7f", // spring green
+      ];
+
+      let isBlack = true; // 배경색 초기값: 검정색
+
+      function changeBackground() {
+        if (isBlack) {
+          canvas.style.background = "#ffffff"; // 배경색을 하얀색으로 변경
+        } else {
+          canvas.style.background = "#000000"; // 배경색을 검정색으로 변경
+        }
+        isBlack = !isBlack; // 배경색 변경
+      }
+
+      function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // 캔버스 초기화
+      }
+
+      let startX = canvas.width / 2;
+      let startY = canvas.height / 2;
+      let currentColor = 0;
+
+      canvas.addEventListener("click", function (event) {
+        const x = event.clientX - canvas.offsetLeft;
+        const y = event.clientY - canvas.offsetTop;
+
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(x, y);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = colors[currentColor];
+        ctx.stroke();
+
+        startX = x;
+        startY = y;
+        currentColor = (currentColor + 1) % colors.length;
+      });
+    </script>
+  </body>
+</html>
